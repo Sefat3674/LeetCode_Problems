@@ -1,0 +1,14 @@
+class Solution {
+    fun nextGreaterElement(nums1: IntArray, nums2: IntArray): IntArray {
+        val next=mutableMapOf<Int,Int>()
+        val stack=ArrayDeque<Int>()
+        for(i in nums2.size -1  downTo 0){
+            while(stack.isNotEmpty() && stack.last()<=nums2[i]){
+                stack.removeLast()
+            }
+            next[nums2[i]]=if(stack.isEmpty()) -1 else stack.last()
+            stack.addLast(nums2[i])
+        }
+        return nums1.map{num->next[num] ?:-1}.toIntArray()
+    }
+}
