@@ -1,0 +1,13 @@
+1. What is OOP?
+
+Object-Oriented Programming (OOP) is a programming paradigm based on objects, which are instances of classes. OOP helps organize code in a modular, reusable, and maintainable way.
+
+Key principles of OOP:
+
+Encapsulation – Keep data safe inside objects.
+
+Abstraction – Hide implementation details and expose only functionality.
+
+Inheritance – Reuse code from other classes.
+
+Polymorphism – One interface, multiple implementations.
