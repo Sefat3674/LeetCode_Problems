@@ -1,0 +1,23 @@
+/**
+ * Definition for a Node.
+ * class Node(var `val`: Int) {
+ *     var children: List<Node?> = listOf()
+ * }
+ */
+
+class Solution {
+    fun postorder(root: Node?): List<Int> {
+        val result=mutableListOf<Int>()
+        postorder(root,result)
+        return result
+        
+    }
+private fun postorder(root: Node?, result: MutableList<Int>){
+    if(root==null) return
+
+    for(child in root.children){
+        postorder(child,result)
+    }
+    result.add(root.`val`)
+}
+}
